@@ -60,6 +60,7 @@
   li = ul.getElementsByTagName("li");
 
   $("#group1").dropdown('toggle')
+  ev.stopPropagation();
 
 
   // Loop through all list items, and hide those who don't match the search query
@@ -82,7 +83,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="#">FContents</a>
+            <a class="navbar-brand" href="#">TContents</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
