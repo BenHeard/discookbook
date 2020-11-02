@@ -59,6 +59,9 @@
   ul = document.getElementById("myMenu");
   li = ul.getElementsByTagName("li");
 
+  $("#mybutton").dropdown('toggle')
+
+
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
@@ -79,7 +82,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="#">Bcontents</a>
+            <a class="navbar-brand" href="#">Contents</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -90,7 +93,7 @@
 
               <!--Group1Soups-->
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Soups<span class="caret"></span></a>
+                <a id="group1" class="dropdown-toggle" data-toggle="dropdown" href="#">Soups<span class="caret"></span></a>
                 <ul id="myMenu" class="dropdown-menu">
                   <li><a href="#soups1" data-toggle="collapse" data-target="#myNavbar">Pumpkin Soup</a></li>
                   <li><a href="#soups2" data-toggle="collapse" data-target="#myNavbar">Leek and Potato Soup</a></li>
