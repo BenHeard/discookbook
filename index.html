@@ -55,14 +55,14 @@
   // Declare variables
   var input, filter, ul, li, a, i;
   input = document.getElementById("mySearch");
-
+  filter = input.value.toUpperCase();
   ul = document.getElementById("myMenu");
   li = ul.getElementsByTagName("li");
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
-    if (a.innerHTML.indexOf(input) > -1) {
+    if (a.innerHTML.indexOf(filter) > -1) {
       li[i].style.display = "";
     } else {
       li[i].style.display = "none";
@@ -87,24 +87,11 @@
 
               <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
 
-              <ul id="myMenu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#soups1">Ppumpkin Soup</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-                <li><a href="#">PHP</a></li>
-                <li><a href="#">Python</a></li>
-                <li><a href="#">jQuery</a></li>
-                <li><a href="#">SQL</a></li>
-                <li><a href="#">Bootstrap</a></li>
-                <li><a href="#">Node.js</a></li>
-              
-
 
               <!--Group1Soups-->
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Soups<span class="caret"></span></a>
-                <ul class="dropdown-menu">
+                <ul id="myMenu" class="dropdown-menu">
                   <li><a href="#soups1" data-toggle="collapse" data-target="#myNavbar">Pumpkin Soup</a></li>
                   <li><a href="#soups2" data-toggle="collapse" data-target="#myNavbar">Leek and Potato Soup</a></li>
                   <li><a href="#soups3" data-toggle="collapse" data-target="#myNavbar">Minestrone Soup</a></li>
@@ -371,7 +358,7 @@
               <!--Group8-->
               <li><a href="#coo" data-toggle="collapse" data-target="#myNavbar">Cooking Terms</a></li>
 
-            </ul>
+
 
             </ul>
           </div>
