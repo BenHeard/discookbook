@@ -14,65 +14,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <img src="front.jpg" width="100%" style="position: relative; top: 50px">
 
-  <style>
-
-/* Style the search box */
-#mySearch {
-    width: 100%;
-    font-size: 18px;
-    padding: 11px;
-    border: 1px solid #ddd;
-  }
-  
-  /* Style the navigation menu */
-  #myMenu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Style the navigation links */
-  #myMenu li a {
-    padding: 12px;
-    text-decoration: none;
-    color: black;
-    display: block
-  }
-  
-  #myMenu li a:hover {
-    background-color: #eee;
-  }
-
-  </style>
-
+ 
 
 </head>
 <body style="height:1500px">
   <script src="src/index.js"></script>
 
-<script>
-  function myFunction() {
-  // Declare variables
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("mySearch");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myMenu");
-  li = ul.getElementsByTagName("li");
 
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-
-}
-
-</script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -88,85 +36,11 @@
             <ul class="nav navbar-nav">
 
 
-              <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-
-
-              <script>
-   
-                $('#group1.keep-open').on({
-                 "shown.bs.dropdown": function() { this.closable = false; },
-                 "click":             function() { this.closable = true; },
-                 "hide.bs.dropdown":  function() { return this.closable; }
-             });
+              
              
-               </script>
-             
-                     
-             <li class="dropdown">
-               <a id="group1" class="dropdown-toggle" data-toggle="collapse" data-target="#myMenu">Drop Down
-               <span class="caret"></span>
-               <ul id="myMenu" class="dropdown-menu">
-                <li><a href="#" data-toggle="collapse" data-target="#myNavbar"></a></li>
-
-                <li><a href="#soups1" data-toggle="collapse" data-target="#myNavbar">Pumpkin Soup</a></li>
-                <li><a href="#soups2" data-toggle="collapse" data-target="#myNavbar">Leek and Potato Soup</a></li>
-                <li><a href="#soups3" data-toggle="collapse" data-target="#myNavbar">Minestrone Soup</a></li>
-                <li><a href="#soups4" data-toggle="collapse" data-target="#myNavbar">Chicken and Leek Soup</a></li>
-                  <li><a href="#soups5" data-toggle="collapse" data-target="#myNavbar">Chicken and Vegetable Soup</a></li>
-                  <li><a href="#soups6" data-toggle="collapse" data-target="#myNavbar">Bacon and Vegetable Soup</a></li>
-                  <li><a href="#soups7" data-toggle="collapse" data-target="#myNavbar">Nanna's Vegetable Soup</a></li>
-                  <li><a href="#soups8" data-toggle="collapse" data-target="#myNavbar">Ron's Pea and Ham Soup</a></li>
-                  <li><a href="#soups9" data-toggle="collapse" data-target="#myNavbar">Spiced Carrot Soup with Coconut Cream</a></li>
-                  <li><a href="#soups10" data-toggle="collapse" data-target="#myNavbar">Roast Carrot and Herb Dumpling Soup</a></li>
-                  <li><a href="#soups11" data-toggle="collapse" data-target="#myNavbar">Spiced Pumpkin Soup</a></li>
-                  <li><a href="#soups12" data-toggle="collapse" data-target="#myNavbar">Sweet Potato and Coriander Soup</a></li>
-                  
-               </ul>
-             </li>
+            
 
 
-              <!--Group0All-->
-              <li class="dropdown">
-                <a  class="dropdown-toggle" data-toggle="dropdown" href="#">All Recipes<span class="caret"></span></a>
-                <ul id="myMenu" class="dropdown-menu">
-             
-
-                  <li><a href="#soups1" data-toggle="collapse" data-target="#myNavbar">Pumpkin Soup</a></li>
-                  <li><a href="#soups2" data-toggle="collapse" data-target="#myNavbar">Leek and Potato Soup</a></li>
-                  <li><a href="#soups3" data-toggle="collapse" data-target="#myNavbar">Minestrone Soup</a></li>
-                  <li><a href="#soups4" data-toggle="collapse" data-target="#myNavbar">Chicken and Leek Soup</a></li>
-                  <li><a href="#soups5" data-toggle="collapse" data-target="#myNavbar">Chicken and Vegetable Soup</a></li>
-                  <li><a href="#soups6" data-toggle="collapse" data-target="#myNavbar">Bacon and Vegetable Soup</a></li>
-                  <li><a href="#soups7" data-toggle="collapse" data-target="#myNavbar">Nanna's Vegetable Soup</a></li>
-                  <li><a href="#soups8" data-toggle="collapse" data-target="#myNavbar">Ron's Pea and Ham Soup</a></li>
-                  <li><a href="#soups9" data-toggle="collapse" data-target="#myNavbar">Spiced Carrot Soup with Coconut Cream</a></li>
-                  <li><a href="#soups10" data-toggle="collapse" data-target="#myNavbar">Roast Carrot and Herb Dumpling Soup</a></li>
-                  <li><a href="#soups11" data-toggle="collapse" data-target="#myNavbar">Spiced Pumpkin Soup</a></li>
-                  <li><a href="#soups12" data-toggle="collapse" data-target="#myNavbar">Sweet Potato and Coriander Soup</a></li>
-                  <li><a href="#savs1" data-toggle="collapse" data-target="#myNavbar">Dired Fruit Hors D'Oeuvres</a></li>
-                  <li><a href="#savs2" data-toggle="collapse" data-target="#myNavbar">Ham and Horseradish Squares</a></li>
-                  <li><a href="#savs3" data-toggle="collapse" data-target="#myNavbar">Fruit Kebabs with Honey Yoghurt Cream</a></li>
-                  <li><a href="#savs4" data-toggle="collapse" data-target="#myNavbar">Meat Balls with Chilli or Yoghurt Sauce</a></li>
-                  <li><a href="#savs5" data-toggle="collapse" data-target="#myNavbar">Canapes</a></li>
-                  <li><a href="#savs6" data-toggle="collapse" data-target="#myNavbar">Bruschetta</a></li>
-                  <li><a href="#savs7" data-toggle="collapse" data-target="#myNavbar">Spinach Triangles</a></li>
-                  <li><a href="#savs8" data-toggle="collapse" data-target="#myNavbar">Filo Cheese Parcels</a></li>
-                  <li><a href="#savs9" data-toggle="collapse" data-target="#myNavbar">Mini Quiches</a></li>
-                  <li><a href="#savs10" data-toggle="collapse" data-target="#myNavbar">Mini Pizzas</a></li>
-                  <li><a href="#savs11" data-toggle="collapse" data-target="#myNavbar">Nachos</a></li>
-                  <li><a href="#savs12" data-toggle="collapse" data-target="#myNavbar">Chicken and Asparagus Rolls</a></li>
-                  <li><a href="#savs13" data-toggle="collapse" data-target="#myNavbar">Continental Salad Sticks</a></li>
-                  <li><a href="#savs14" data-toggle="collapse" data-target="#myNavbar">Bread Cases, 3 Fillings</a></li>
-                  <li><a href="#savs15" data-toggle="collapse" data-target="#myNavbar">Cheese Nut Roll</a></li>
-                  <li><a href="#savs16" data-toggle="collapse" data-target="#myNavbar">Cheese and Bacon Fingers</a></li>
-                  <li><a href="#savs17" data-toggle="collapse" data-target="#myNavbar">Savoury Cheese Ring</a></li>
-                  <li><a href="#savs18" data-toggle="collapse" data-target="#myNavbar">Savoury Mini Muffins</a></li>
-                  <li><a href="#savs19" data-toggle="collapse" data-target="#myNavbar">Smoked Salmon Rolls</a></li>
-                  <li><a href="#savs20" data-toggle="collapse" data-target="#myNavbar">Quince Paste</a></li>
-
-
-                </ul>
-              </li>
 
               <!--Group1Soups-->
               <li class="dropdown">
