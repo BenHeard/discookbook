@@ -59,8 +59,6 @@
   ul = document.getElementById("myMenu");
   li = ul.getElementsByTagName("li");
 
-  $("#group1").dropdown('toggle')
-
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
@@ -71,7 +69,9 @@
       li[i].style.display = "none";
     }
   }
+
 }
+
 </script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -91,10 +91,46 @@
               <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
 
 
+              <script>
+   
+                $('#group1.keep-open').on({
+                 "shown.bs.dropdown": function() { this.closable = false; },
+                 "click":             function() { this.closable = true; },
+                 "hide.bs.dropdown":  function() { return this.closable; }
+             });
+             
+               </script>
+             
+                     
+             <li class="dropdown">
+               <a id="group1" class="dropdown-toggle" data-toggle="collapse" data-target="#myMenu">Drop Down
+               <span class="caret"></span>
+               <ul id="myMenu" class="dropdown-menu">
+                <li><a href="#" data-toggle="collapse" data-target="#myNavbar"></a></li>
+
+                <li><a href="#soups1" data-toggle="collapse" data-target="#myNavbar">Pumpkin Soup</a></li>
+                <li><a href="#soups2" data-toggle="collapse" data-target="#myNavbar">Leek and Potato Soup</a></li>
+                <li><a href="#soups3" data-toggle="collapse" data-target="#myNavbar">Minestrone Soup</a></li>
+                <li><a href="#soups4" data-toggle="collapse" data-target="#myNavbar">Chicken and Leek Soup</a></li>
+                  <li><a href="#soups5" data-toggle="collapse" data-target="#myNavbar">Chicken and Vegetable Soup</a></li>
+                  <li><a href="#soups6" data-toggle="collapse" data-target="#myNavbar">Bacon and Vegetable Soup</a></li>
+                  <li><a href="#soups7" data-toggle="collapse" data-target="#myNavbar">Nanna's Vegetable Soup</a></li>
+                  <li><a href="#soups8" data-toggle="collapse" data-target="#myNavbar">Ron's Pea and Ham Soup</a></li>
+                  <li><a href="#soups9" data-toggle="collapse" data-target="#myNavbar">Spiced Carrot Soup with Coconut Cream</a></li>
+                  <li><a href="#soups10" data-toggle="collapse" data-target="#myNavbar">Roast Carrot and Herb Dumpling Soup</a></li>
+                  <li><a href="#soups11" data-toggle="collapse" data-target="#myNavbar">Spiced Pumpkin Soup</a></li>
+                  <li><a href="#soups12" data-toggle="collapse" data-target="#myNavbar">Sweet Potato and Coriander Soup</a></li>
+                  
+               </ul>
+             </li>
+
+
               <!--Group0All-->
               <li class="dropdown">
-                <a id="group1" class="dropdown-toggle" data-toggle="dropdown" href="#">All Recipes<span class="caret"></span></a>
+                <a  class="dropdown-toggle" data-toggle="dropdown" href="#">All Recipes<span class="caret"></span></a>
                 <ul id="myMenu" class="dropdown-menu">
+             
+
                   <li><a href="#soups1" data-toggle="collapse" data-target="#myNavbar">Pumpkin Soup</a></li>
                   <li><a href="#soups2" data-toggle="collapse" data-target="#myNavbar">Leek and Potato Soup</a></li>
                   <li><a href="#soups3" data-toggle="collapse" data-target="#myNavbar">Minestrone Soup</a></li>
