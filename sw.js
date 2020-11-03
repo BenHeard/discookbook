@@ -1,4 +1,4 @@
-self.addEventListener('insstall', event => {
+self.addEventListener('install', event => {
     console.log('Install event!');
 })
 
