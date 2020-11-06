@@ -14,7 +14,7 @@ var cacheName = 'cache-v1';
 var resourcesToPrecache = [
     '/',
     'index.html',
-    'images/front.jpg'
+    'images/newfront.png'
 ];
 
 self.addEventListener('install', event => {
